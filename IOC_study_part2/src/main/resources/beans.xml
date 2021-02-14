@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    无参构造-->
+<!--    <bean id="user" class="com.pojo.User">-->
+<!--        <property name="name" value="jason"/>-->
+<!--    </bean>-->
+
+<!--
+    有参构造
+-->
+<!--    方法一：下标赋值-->
+<!--    <bean id="user" class="com.pojo.User">-->
+<!--        <constructor-arg index="0" value="jason"/>-->
+<!--    </bean>-->
+
+<!--    方法二：通过类型创建 不建议使用！-->
+<!--    <bean id="user" class="com.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="type赋值"/>-->
+<!--    </bean>-->
+
+<!--    方法三：直接通过参数名来设置-->
+    <bean id="user" class="com.pojo.User">
+        <constructor-arg name="name" value="name赋值"/>
+    </bean>
+
+
+<!--
+    id：bean 的唯一标识符，也就是相当于我们的对象名
+    class： bean对象所对应的全限定名：包名+类型
+    name： 也是别名，而且name可以同时取多个别名
+-->
+    <bean id="userT" class="com.pojo.UserT" name="user2,u2">
+        <property name="name" value="jasonT"/>
+    </bean>
+
+</beans>
