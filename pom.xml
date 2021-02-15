@@ -18,6 +18,7 @@
         <module>Autowired</module>
         <module>annotation</module>
         <module>appConfig</module>
+        <module>proxy</module>
     </modules>
 
 
